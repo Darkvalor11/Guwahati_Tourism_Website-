@@ -1,0 +1,607 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #111;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbartop {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size:larger;
+
+  background-image: url(WhatsApp\ Image\ 2025-09-03\ at\ 17.34.47.jpeg);
+  background-size: cover;     /* Make image cover entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.logo img {
+  height: 5rem; 
+  margin-right: 10px;
+}
+
+
+.main-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.main-nav a {
+  flex-grow: 1;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0 10px;
+  font-weight: bolder;
+}
+
+.main-nav a:hover {
+  color: yellow;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar input {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.searchbar button {
+  padding: 6px 12px;
+  border: none;
+  background: #f0c040;
+  color: #111;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+.navbar ul li {
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block; 
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color:yellow;
+}
+
+
+.hero-carousel {
+  max-width: 90vw;
+  margin: 20px auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  background: #111;
+  height: 340px;
+  
+}
+
+.carousel {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+.attractions {
+      padding: 40px;
+      text-align: center;
+    }
+    .attractions h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+    .cards {
+  display: flex;
+  flex-wrap: wrap;          
+  gap: 20px;                
+  justify-content: center;  
+}
+
+    .card {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+
+.card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.25);
+}
+
+.card h3 {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  background:transparent;  
+  font-size: 1.4rem;
+  text-align: center;
+  box-sizing: border-box;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  font-weight:bolder;
+  font-style: italic;
+  text-decoration: underline;
+  color:yellow;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+    .card a {
+      display: block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+    }
+h2 {
+  color: #111;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #f0c040;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #f0c040;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.dish-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  
+}
+
+.dish-card {
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  background: #fff;
+  
+}
+
+.dish-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dish-card h3 {
+  margin: 10px 0 5px 0;
+  font-style: italic;
+  font-weight: bold;
+  color: #ff0000; /* matching  red accent */
+  font-size: x-large;
+}
+
+.dish-card p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+  font-size:larger;
+
+}
+.handicraft-images {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.handicraft-images img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+article img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article h3 {
+  color: #cc0000; 
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: x-large;
+}
+
+article p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  font-size: larger;
+}
+.accommodation-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.accommodation-card {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.accommodation-card h3 {
+  margin: 0 0 8px 0;
+  color: #cc0000;
+  font-weight: bold;
+  font-size: large;
+}
+
+.accommodation-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+
+
+
+
+/* accomod page */
+.travel-guide {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1.5em;
+  margin-top: 2em;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 800px;
+font-size: large;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.travel-guide h2 {
+  color: #2c3e50;
+  margin-bottom: 0.75em;
+  font-size: 1.8em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.25em;
+}
+
+.travel-guide p {
+  font-size: 1.05em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.travel-guide ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.travel-guide ul li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.travel-guide ul li strong {
+  font-size: 1.2em;
+  color: #2980b9;
+}
+
+.travel-guide ul li br {
+  line-height: 1.5em;
+}
+.things-to-do body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 1.5em;
+      color: #333;
+    }
+    .things-to-do h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 0.25em;
+      margin-bottom: 1em;
+    }
+    .things-to-do ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .things-to-do li {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin-bottom: 1em;
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .things-to-do li strong {
+      font-size: 1.2em;
+      color: #2980b9;
+    }
+    .things-to-do a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .things-to-do a:hover {
+      text-decoration: underline;
+    }
+
+
+    .ghy-nightlife {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 1.5em;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ghy-nightlife h2 {
+  color: #2c3e50;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.25em;
+  display: inline-block;
+}
+
+.ghy-nightlife p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.ghy-nightlife ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ghy-nightlife ul li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ghy-nightlife ul li strong {
+  font-size: 1.3em;
+  color: #2980b9;
+}
+
+.ghy-nightlife ul li img {
+  margin-top: 0.75em;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ghy-nightlife ul li:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.map-section h2 {
+  color: #2c3e50;
+  
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.map-section {
+  
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  padding: 1.5em;
+}
+
